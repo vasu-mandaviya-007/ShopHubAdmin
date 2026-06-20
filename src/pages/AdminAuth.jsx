@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Lock, Loader2, ArrowRight, ShieldCheck } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
+import { sendOtp, verifyOtp } from '../apis/adminApi';
 
 const AdminAuth = () => {
 
@@ -22,12 +23,14 @@ const AdminAuth = () => {
         setLoading(true); setError(''); setMessage('');
 
         try {
-            const res = await fetch('http://localhost:3001/admin/auth/send-otp', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email }),
-            });
-            const data = await res.json();
+            // const res = await fetch('http://localhost:3001/', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ email }),
+            // });
+            // const data = await res.json();
+
+            const data = await sendOtp(email);
 
             if (data.success) {
                 setMessage(data.message);
@@ -49,12 +52,14 @@ const AdminAuth = () => {
         setLoading(true); setError('');
 
         try {
-            const res = await fetch('http://localhost:3001/admin/auth/verify-otp', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, otp }),
-            });
-            const data = await res.json();
+            // const res = await fetch('http://localhost:3001/', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ email, otp }),
+            // });
+            // const data = await res.json();
+
+            const data = await verifyOtp({ email, otp });
 
             if (data.success) {
                 login(data.token, data.admin);
@@ -73,12 +78,14 @@ const AdminAuth = () => {
         setLoading(true);
         try {
             // Direct verify route ko demo credentials bhej rahe hain
-            const res = await fetch('http://localhost:3001/admin/auth/verify-otp', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: 'demo@shopix.com', otp: '123456' }),
-            });
-            const data = await res.json();
+            // const res = await fetch('http://localhost:3001/admin/auth/verify-otp', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ email: 'demo@shopix.com', otp: '123456' }),
+            // });
+            // const data = await res.json();
+
+            const data = await verifyOtp({ email: 'demo@shopix.com', otp: '123456' })
 
             if (data.success) {
                 login(data.token, data.admin);
