@@ -1,0 +1,403 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* index.css */
+@import './accent-system.css';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+button {
+
+  cursor: pointer;
+
+}
+
+/* index.css */
+/* html {
+  scrollbar-gutter: stable;
+} */
+
+
+@theme {
+
+  --color-box: #262626;
+
+  --color-base-50: oklch(98.5% .002 247.839);
+  --color-base-100: oklch(96.7% .003 264.542);
+  --color-base-200: oklch(92.8% .006 264.531);
+  --color-base-300: oklch(87.2% .01 258.338);
+  --color-base-400: oklch(70.7% .022 261.325);
+  --color-base-500: oklch(55.1% .027 264.364);
+  --color-base-600: oklch(44.6% .03 256.802);
+  --color-base-700: oklch(37.3% .034 259.733);
+  --color-base-800: oklch(30% 0 0);
+  --color-base-900: oklch(23% 0 0);
+  --color-base-950: oklch(19% 0 0);
+  --color-base-main: #191919;
+
+
+  /* --color-accent-50: var(--accent-50);
+  --color-accent-100: var(--accent-100);
+  --color-accent-400: var(--accent-400);
+  --color-accent-500: var(--accent-500);
+  --color-accent-600: var(--accent-600); */
+
+}
+
+/* --color-primary-50: rgb(240, 249, 255);
+--color-primary-100: rgb(224, 242, 254);
+--color-primary-200: rgb(186, 230, 253);
+--color-primary-300: rgb(125, 211, 252);
+--color-primary-400: rgb(56, 189, 248);
+--color-primary-500: rgb(14, 165, 233);
+--color-primary-600: rgb(2, 132, 199);
+--color-primary-700: rgb(3, 105, 161);
+--color-primary-800: rgb(7, 89, 133);
+--color-primary-900: rgb(12, 74, 110);
+--color-primary-950: rgb(8, 47, 73); */
+/* --color-font-subtle-light: var(--color-base-500);
+--color-font-subtle-dark: var(--color-base-400);
+--color-font-default-light: var(--color-base-600);
+--color-font-default-dark: var(--color-base-300);
+--color-font-important-light: var(--color-base-900);
+--color-font-important-dark: var(--color-base-100); */
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+
+/* :root {
+  --bg-base: #f8fafc;
+  --bg-panel: #ffffff;
+  --bg-hover: #f1f5f9;
+  --border-soft: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+}
+
+.dark {
+  --bg-base: #252525;       
+  --bg-panel:  #1e1f22;      
+  --bg-hover: #313338;     
+  
+  --border-soft: #1e1f22;  
+  
+  --text-main: #f2f3f5;     
+  --text-muted: #b5bac1;    
+} */
+
+
+
+
+@utility custom-header {
+  background: "#4B5563 !important";
+  color: "white";
+  padding: "0 0 0 10px",
+}
+
+
+.dark .MuiDataGrid-panelWrapper {
+  color: white;
+}
+
+
+
+/* Bouncy Enter Animation */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(15px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-5px);
+    /* Thoda bada hoke upar jayega */
+  }
+
+  75% {
+    transform: scale(0.98) translateY(2px);
+    /* Wapas thoda chhota hoga */
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    /* Normal position par set ho jayega */
+  }
+}
+
+/* Smooth Leave Animation */
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.9) translateY(15px);
+  }
+}
+
+.animate-bounce-in {
+  /* cubic-bezier spring jaisa effect deta hai */
+  animation: bounceIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-fade-out {
+  animation: fadeOutDown 0.3s ease-in forwards;
+}
+
+
+
+
+/* From Uiverse.io by teymr */
+/* #Light,
+#Dark,
+#System {
+  display: none;
+} */
+/* 
+.switch {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(99, 99, 99);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(126, 126, 126);
+  box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+  transition: 0.5s;
+}
+
+.switch svg {
+  width: 1.2em;
+}
+
+.switch svg path {
+  fill: rgb(48, 48, 48);
+}
+
+#Light:checked+.switch,
+#Dark:checked+.switch,
+#System:checked+.switch {
+  box-shadow:
+    0px 0px 1px rgb(151, 243, 255) inset,
+    0px 0px 2px rgb(151, 243, 255) inset,
+    0px 0px 10px rgb(151, 243, 255) inset,
+    0px 0px 40px rgb(151, 243, 255),
+    0px 0px 100px rgb(151, 243, 255),
+    0px 0px 5px rgb(151, 243, 255);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(146, 180, 184);
+}
+
+#Light:checked+.switch svg,
+#Dark:checked+.switch svg,
+#System:checked+.switch svg {
+  filter: drop-shadow(0px 0px 5px rgb(151, 243, 255));
+}
+
+#Light:checked+.switch svg path,
+#Dark:checked+.switch svg path,
+#System:checked+.switch svg path {
+  fill: rgb(255, 255, 255);
+}
+
+#Light:active+.switch,
+#Dark:active+.switch,
+#System:active+.switch {
+  transform: translate(0em, 0.1em);
+  box-shadow:
+    0px 0px 0.1px rgb(151, 243, 255) inset,
+    0px 0px 0.2px rgb(151, 243, 255) inset,
+    0px 0px 1px rgb(151, 243, 255) inset,
+    0px 0px 10px rgb(151, 243, 255),
+    0px 0px 50px rgb(151, 243, 255);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(146, 180, 184);
+}
+ 
+#Light:active+.switch svg path,
+#Dark:active+.switch svg path,
+#System:active+.switch svg path {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0em, 0.1em);
+} */
+
+
+
+
+.switch {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(99, 99, 99);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(126, 126, 126);
+  box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+  transition: 0.5s;
+}
+
+.switch svg {
+  font-size: 25px;
+  width: 2em;
+}
+
+.switch svg path {
+  fill: rgb(48, 48, 48);
+}
+
+.active.switch {
+  box-shadow:
+    0px 0px 1px rgb(151, 243, 255) inset,
+    0px 0px 2px rgb(151, 243, 255) inset,
+    0px 0px 10px rgb(151, 243, 255) inset,
+    0px 0px 40px rgb(151, 243, 255),
+    0px 0px 100px rgb(151, 243, 255),
+    0px 0px 5px rgb(151, 243, 255);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(146, 180, 184);
+}
+
+.active.switch svg {
+  filter: drop-shadow(0px 0px 5px rgb(151, 243, 255));
+}
+
+.active.switch svg path {
+  fill: rgb(255, 255, 255);
+}
+
+.active.switch {
+  transform: translate(0em, 0.1em);
+  box-shadow:
+    0px 0px 0.1px rgb(151, 243, 255) inset,
+    0px 0px 0.2px rgb(151, 243, 255) inset,
+    0px 0px 1px rgb(151, 243, 255) inset,
+    0px 0px 10px rgb(151, 243, 255),
+    0px 0px 50px rgb(151, 243, 255);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(146, 180, 184);
+}
+
+.active.switch svg path {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0em, 0.1em);
+}
+
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(4px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(4px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-4px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.afu1 {
+  animation: fadeUp .35s ease both .05s
+}
+
+.afu2 {
+  animation: fadeUp .35s ease both .12s
+}
+
+.fade-left {
+  animation: fadeLeft .35s ease both .05s
+}
+
+.fade-right {
+  animation: fadeRight .35s ease both .05s
+}
+
+
+
+
+/* App.css me add karo */
+@keyframes rowGlow {
+  0% {
+    background-color: rgba(14, 165, 233, 0.4);
+  }
+
+  /* Tailwind Sky/Accent glow */
+  100% {
+    background-color: transparent;
+  }
+}
+
+.highlight-row {
+  animation: rowGlow 3s ease-out forwards !important;
+}
+
+/* Dark mode ke liye alag se handle karna ho toh: */
+.dark .highlight-row {
+  animation: rowGlowDark 3s ease-out forwards !important;
+}
+
+@keyframes rowGlowDark {
+  0% {
+    background-color: rgba(14, 165, 233, 0.25);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}

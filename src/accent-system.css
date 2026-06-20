@@ -1,0 +1,395 @@
+:root {
+    --accent-50: #f0f9ff;
+    --accent-100: #e0f2fe;
+    --accent-200: #bae6fd;
+    --accent-300: #7dd3fc;
+    --accent-400: #38bdf8;
+    --accent-500: #0ea5e9;
+    --accent-600: #0284c7;
+    --accent-700: #0369a1;
+    --accent-800: #075985;
+    --accent-900: #0c4a6e;
+
+    --accent-from: #38bdf8;
+    --accent-to: #2563eb;
+}
+
+/* ── Sky (same as default, explicit) ── */
+.theme-sky {
+    --accent-50: #f0f9ff;
+    --accent-100: #e0f2fe;
+    --accent-200: #bae6fd;
+    --accent-300: #7dd3fc;
+    --accent-400: #38bdf8;
+    --accent-500: #0ea5e9;
+    --accent-600: #0284c7;
+    --accent-700: #0369a1;
+    --accent-800: #075985;
+    --accent-900: #0c4a6e;
+
+    --accent-from: #38bdf8;
+    --accent-to: #2563eb;
+}
+
+/* ── Violet ── */
+.theme-violet {
+    --accent-50: #f5f3ff;
+    --accent-100: #ede9fe;
+    --accent-200: #ddd6fe;
+    --accent-300: #c4b5fd;
+    --accent-400: #a78bfa;
+    --accent-500: #8b5cf6;
+    --accent-600: #7c3aed;
+    --accent-700: #6d28d9;
+    --accent-800: #5b21b6;
+    --accent-900: #4c1d95;
+
+    --accent-from: #a78bfa;
+    --accent-to: #7c3aed;
+}
+
+/* ── Emerald ── */
+.theme-emerald {
+    --accent-50: #ecfdf5;
+    --accent-100: #d1fae5;
+    --accent-200: #a7f3d0;
+    --accent-300: #6ee7b7;
+    --accent-400: #34d399;
+    --accent-500: #10b981;
+    --accent-600: #059669;
+    --accent-700: #047857;
+    --accent-800: #065f46;
+    --accent-900: #064e3b;
+
+    --accent-from: #34d399;
+    --accent-to: #059669;
+
+}
+
+/* ── Rose ── */
+.theme-rose {
+    --accent-50: #fff1f2;
+    --accent-100: #ffe4e6;
+    --accent-200: #fecdd3;
+    --accent-300: #fda4af;
+    --accent-400: #fb7185;
+    --accent-500: #f43f5e;
+    --accent-600: #e11d48;
+    --accent-700: #be123c;
+    --accent-800: #9f1239;
+    --accent-900: #881337;
+
+    --accent-from: #fb7185;
+    --accent-to: #e11d48;
+
+}
+
+.theme-indigo {
+    --accent-50: #eef2ff;
+    --accent-100: #e0e7ff;
+    --accent-200: #c7d2fe;
+    --accent-300: #a5b4fc;
+    --accent-400: #818cf8;
+    --accent-500: #6366f1;
+    --accent-600: #4f46e5;
+    --accent-700: #4338ca;
+    --accent-800: #3730a3;
+    --accent-900: #312e81;
+
+    --accent-from: #818cf8;
+    --accent-to: #4f46e5;
+
+}
+
+.theme-pink {
+
+    --accent-50: var(--color-pink-50);
+    --accent-100: var(--color-pink-100);
+    --accent-200: var(--color-pink-200);
+    --accent-300: var(--color-pink-300);
+    --accent-400: var(--color-pink-400);
+    --accent-500: var(--color-pink-500);
+    --accent-600: var(--color-pink-600);
+    --accent-700: var(--color-pink-700);
+    --accent-800: var(--color-pink-800);
+    --accent-900: var(--color-pink-900);
+
+    --accent-from: oklch(71.2% 0.194 13.428);
+    --accent-to: oklch(65.6% 0.241 354.308);
+
+}
+
+/* ── Amber ── */
+.theme-amber {
+    --accent-50: #fffbeb;
+    --accent-100: #fef3c7;
+    --accent-200: #fde68a;
+    --accent-300: #fcd34d;
+    --accent-400: #fbbf24;
+    --accent-500: #f59e0b;
+    --accent-600: #d97706;
+    --accent-700: #b45309;
+    --accent-800: #92400e;
+    --accent-900: #78350f;
+
+    --accent-from: #fbbf24;
+    --accent-to: #d97706;
+}
+
+/* ── 1. Oceanic Cyan Theme ── */
+.theme-ocean {
+    --accent-50: var(--color-cyan-50);
+    --accent-100: var(--color-cyan-100);
+    --accent-200: var(--color-cyan-200);
+    --accent-300: var(--color-cyan-300);
+    --accent-400: var(--color-cyan-400);
+    --accent-500: var(--color-cyan-500);
+    --accent-600: var(--color-cyan-600);
+    --accent-700: var(--color-cyan-700);
+    --accent-800: var(--color-cyan-800);
+    --accent-900: var(--color-cyan-900);
+
+    --accent-from: var(--color-cyan-400);
+    --accent-to: var(--color-blue-500);
+
+}
+
+/* ── 2. Sunset Glow Theme ── */
+.theme-sunset {
+    --accent-50: var(--color-orange-50);
+    --accent-100: var(--color-orange-100);
+    --accent-200: var(--color-orange-200);
+    --accent-300: var(--color-orange-300);
+    --accent-400: var(--color-orange-400);
+    --accent-500: var(--color-orange-500);
+    --accent-600: var(--color-orange-600);
+    --accent-700: var(--color-orange-700);
+    --accent-800: var(--color-orange-800);
+    --accent-900: var(--color-orange-900);
+
+    --accent-from: var(--color-orange-400);
+    --accent-to: var(--color-rose-500);
+
+}
+
+
+:root {
+    --accent-shadow: 14 165 233;
+    /* Sky default */
+}
+
+.theme-sky {
+    --accent-shadow: 14 165 233;
+}
+
+.theme-violet {
+    --accent-shadow: 139 92 246;
+}
+
+.theme-emerald {
+    --accent-shadow: 16 185 129;
+}
+
+.theme-rose {
+    --accent-shadow: 244 63 94;
+}
+
+.theme-indigo {
+    --accent-shadow: 99 102 241;
+}
+
+.theme-pink {
+    --accent-shadow: 236 72 153;
+}
+
+.theme-amber {
+    --accent-shadow: 245 158 11;
+}
+
+.theme-ocean {
+    --accent-shadow: 6 182 212;
+}
+
+.theme-sunset {
+    --accent-shadow: 249 115 22;
+}
+
+
+:root {
+    /* Light Mode Opacities - Soft & Subtle */
+    --shadow-op-sm: 0.25;
+    /* Base depth */
+    --shadow-op-lg: 0.35;
+    /* Base glow */
+    --hover-op-sm: 0.30;
+    /* Hover depth */
+    --hover-op-lg: 0.45;
+    /* Hover glow */
+}
+
+.dark {
+    /* Dark Mode Opacities - Stronger & Brighter (Glow Effect) */
+    --shadow-op-sm: 0.25;
+    --shadow-op-lg: 0.40;
+    --hover-op-sm: 0.40;
+    --hover-op-lg: 0.65;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACCENT UTILITY CLASSES
+   
+   Use these INSTEAD of sky-*, blue-* in your components.
+   They automatically update when the theme class changes on <html>.
+═══════════════════════════════════════════════════════════════ */
+
+
+
+@theme {
+
+    --color-accent-50: var(--accent-50);
+    --color-accent-100: var(--accent-100);
+    --color-accent-200: var(--accent-200);
+    --color-accent-300: var(--accent-300);
+    --color-accent-400: var(--accent-400);
+    --color-accent-500: var(--accent-500);
+    --color-accent-600: var(--accent-600);
+    --color-accent-600: var(--accent-600);
+
+}
+
+
+
+
+/* Text */
+.text-accent-400 {
+    color: var(--accent-400);
+}
+
+.text-accent-500 {
+    color: var(--accent-500);
+}
+
+.text-accent-600 {
+    color: var(--accent-600);
+}
+
+.text-accent-700 {
+    color: var(--accent-700);
+}
+
+/* Border */
+.border-accent-200 {
+    border-color: var(--accent-200);
+}
+
+.border-accent-400 {
+    border-color: var(--accent-400);
+}
+
+.border-accent-500 {
+    border-color: var(--accent-500);
+}
+
+/* Ring (focus) */
+.ring-accent-500 {
+    --tw-ring-color: var(--accent-500);
+}
+
+.focus\:ring-accent {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-500) 20%, transparent);
+}
+
+/* Gradient button — THE MOST USED ONE */
+.bg-accent-gradient {
+    background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+}
+
+/* .shadow-accent {
+    box-shadow: 0 4px 16px var(--accent-shadow);
+} */
+
+/* @utility shadow-accent {
+    box-shadow: 0 3px 12px var(--accent-shadow);
+}
+
+@utility shadow-accent-lg {
+    box-shadow: 0 8px 24px var(--accent-shadow);
+} */
+
+/* @utility shadow-accent {
+    box-shadow: 0 3px 10px 1.5px rgb(var(--accent-shadow) / 0.3);
+}
+
+@utility shadow-accent-lg {
+    box-shadow: 0 1px 7px 4px rgb(var(--accent-shadow) / .4);
+} */
+
+
+@utility shadow-accent {
+    /* Normal State: Suble drop shadow with slight tint */
+    box-shadow:
+        0 2px 4px -1px rgb(var(--accent-shadow) / var(--shadow-op-sm)),
+        0 4px 10px -2px rgb(var(--accent-shadow) / var(--shadow-op-lg)) !important;
+    transition: box-shadow 0.3s ease !important;
+}
+
+@utility shadow-accent-lg {
+    /* Hover State: Expanded, brighter, and softer glow */
+    box-shadow:
+        0 4px 6px -1px rgb(var(--accent-shadow) / var(--hover-op-sm)),
+        0 10px 24px -4px rgb(var(--accent-shadow) / var(--hover-op-lg)) !important;
+}
+
+/* Hover variants */
+.shadow-accent:hover {
+    box-shadow: 0 4px 16px var(--accent-shadow) !important;
+}
+
+.shadow-accent-lg:hover {
+    box-shadow: 0 8px 24px var(--accent-shadow);
+}
+
+/* Input focus ring */
+.focus-accent:focus {
+    border-color: var(--accent-500);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-500) 15%, transparent);
+    outline: none;
+}
+
+/* Toggle/switch track */
+.bg-accent-toggle {
+    background: linear-gradient(to right, var(--accent-400), var(--accent-600));
+    box-shadow: 0 2px 8px var(--accent-shadow);
+}
+
+/* Sidebar active item */
+.sidebar-active {
+    background-color: var(--accent-50);
+    color: var(--accent-600);
+    border-left: 3px solid var(--accent-500);
+}
+
+.dark .sidebar-active {
+    background-color: color-mix(in srgb, var(--accent-500) 12%, transparent);
+    color: var(--accent-400);
+}
+
+/* DataGrid header */
+.datagrid-accent-header {
+    background-color: var(--accent-900) !important;
+    color: white !important;
+}
+
+/* Badge */
+.badge-accent {
+    background-color: var(--accent-50);
+    color: var(--accent-600);
+    border: 1px solid var(--accent-200);
+}
+
+.dark .badge-accent {
+    background-color: color-mix(in srgb, var(--accent-500) 12%, transparent);
+    color: var(--accent-400);
+    border-color: color-mix(in srgb, var(--accent-500) 25%, transparent);
+}
